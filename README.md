@@ -3,7 +3,7 @@
 
 An Examination of the effects of specific and random feature removal in Random Forests models, via the classification question of identifying poisonous mushrooms.
 
-###Project Setup:
+### Project Setup:
 * Download all dependencies(see requirements.txt) to your global or virutal Python environment
 * Run `jupyter notebook` in the notebook directory, and follow the web server link provided in order to view the provided notebooks
 * Run all cells in each notebook, in order "Introduction and Project Setup" -> "Data Loading" -> "Data Audit" -> "Preprocessing" -> "Modelling" -> "Evaluation" -> "Conclusion"
