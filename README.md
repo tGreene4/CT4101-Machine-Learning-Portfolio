@@ -8,6 +8,9 @@ An Examination of the effects of specific and random feature removal in Random F
 * Run `jupyter notebook` or equivalent notebook editor in the notebook directory, and follow the web server link provided in order to view the provided notebooks
 * Run all cells in each notebook, in order "Introduction and Project Setup" -> "Data Loading" -> "Data Audit" -> "Preprocessing" -> "Modelling" -> "Evaluation" -> "Conclusion"
 
+### Generative AI Declaration:
+No generative AI was used in the development of this project
+
 ### Citations:
 #### Dataset:
 “Mushroom”, based on the Audubon Society Field Guide to North American Mushrooms(1981).
