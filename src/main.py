@@ -7,6 +7,7 @@ from sklearn.preprocessing import OrdinalEncoder
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.base import clone
 from sklearn.metrics import average_precision_score, f1_score
+from sklearn.compose import ColumnTransformer
   
 # fetch dataset 
 mushroom = fetch_ucirepo(id=73)
@@ -26,8 +27,9 @@ print(dataset.targets["poisonous"].value_counts().to_string())
 x = dataset.features
 y = dataset.targets["poisonous"]
 x_train,x_test,y_train,y_test = train_test_split(x,y,random_state=64,test_size=.25)
-pipeline = make_pipeline(SimpleImputer(strategy="constant",fill_value="g"))
-pipeline.steps.append(("encoder",OrdinalEncoder()))
+encoder = OrdinalEncoder()
+imputer = SimpleImputer(strategy="constant",fill_value="g")
+pipeline = make_pipeline(ColumnTransformer([("impute_stalk_root",imputer,["stalk-root"])],remainder = "passthrough"),encoder)
 
 #baseline
 baseline_pipeline = clone(pipeline)
